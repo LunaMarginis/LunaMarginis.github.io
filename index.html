@@ -248,6 +248,7 @@ body, html {
   update = function() {
     stats.begin();
     stats.end();
+    stats.domElement.style.display = 'none'
     if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
       count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
     }
