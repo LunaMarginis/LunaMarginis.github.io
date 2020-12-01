@@ -490,7 +490,7 @@ and planet size. And colors :) */
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: Luna_Marginis@protonmail.com<br>
       </div>
       <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
+      <form action="mailto:Luna_Marginis@protonmail.com" method="post" enctype="text/plain">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
@@ -500,8 +500,9 @@ and planet size. And colors :) */
           </div>
         </div>
         <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        
-          <i class="fa fa-paper-plane"></i> <p><a href="Luna_Marginis@protonmail.com">Send Message</a></p>
+          <i class="fa fa-paper-plane"></i>
+	  <input type="submit" value="Send">
+          <input type="reset" value="Reset">
         </button>
       </form>
     </div>
