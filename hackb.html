@@ -71,20 +71,236 @@ body, html {
 </style>
 
 
-<body>
-<!-- particles.js container -->
+ <!-- solar system -->
+<div class="w3-content w3-container">
+ <div class="w3-display-topmiddle">
+ <div class="solar-system">
+  <div id="sun"></div>
+ 
+  <div class="orbit mercury-orbit"></div>
+  <div class="mercury-spin">
+    <div id="mercury"></div>
+  </div>
+
+  <div class="orbit venus-orbit"></div>
+  <div class="venus-spin">
+    <div id="venus"></div>
+  </div>
+
+  <div class="orbit earth-orbit"></div>
+  <div class="earth-spin">
+    <div class="orbit moon-orbit"></div>
+    <div class="moon-spin">
+      <div id="moon"></div>
+    </div>
+
+    <img id="earth" src="https://raw.githubusercontent.com/everdimension-personal/codepen-assets/master/earth_small_150.jpg" />
+  </div>
+
+  <div class="orbit mars-orbit"></div>
+  <div class="mars-spin">
+    <div id="mars"></div>
+  </div>
+ </div>
+</div>
+</div>
+</div>
+  <!-- css -->
+<style>
+
+	  body, html {
+  /* width: 100%;
+  height: 100%; */
+  background-color: #121215
+}
+
+.solar-system {
+  position: relative;
+  width: 780px;
+  height: 780px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Some positioning rules that are common for all objects */
+.orbit {
+  border: 1px dashed #121215;
+}
+
+#sun,
+.orbit,
+.orbit + div,
+.orbit + div > div {
+  position: absolute;
+}
+
+#sun,
+.orbit,
+.orbit + div {
+  top: 50%;
+  left: 50%;
+}
+.orbit + div > div {
+  top: 0;
+  left: 50%;
+}
+
+.orbit,
+.orbit + div div,
+#earth {
+  border-radius: 50%;
+}
+
+/* Individual objects rules. They are pretty much the same for 
+all objects and basically only vary in orbit size 
+and planet size. And colors :) */
+
+#sun {
+  /* Positions the top-left corner of the image to be *
+	/* in the middle of the box */
+  height: 200px;
+  width: 200px;
+  background-color:#ff4d00 ; 
+  margin-top: -100px;
+  margin-left: -100px;
+  border-radius: 50%;
+  box-shadow: 0 0 84px orange;
+}
+
+#earth {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-radius: 50%;
+  box-shadow: 0 0 34px #3a4385;
+}
+
+.earth-orbit,
+.earth-spin {
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+}
+
+#moon {
+  margin-top: -6px;
+  margin-left: -6px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 14px #3a4385;
+}
+.moon-orbit,
+.moon-spin {
+  height: 90px;
+  width: 90px;
+  margin-top: -45px;
+  margin-left: -45px;
+  border-color: #447;
+}
+
+#venus {
+  margin-top: -20px;
+  margin-left: -20px;
+  height: 40px;
+  width: 40px;
+  background-color: #55a9e1; 
+  box-shadow: 0 0 34px #3a4385;
+}
+.venus-orbit,
+.venus-spin {
+  margin-top: -185px;
+  margin-left: -185px;
+  width: 370px;
+  height: 370px;
+}
+
+#mercury {
+  margin-top: -13.5px;
+  margin-left: -13.5px;
+  height: 25px;
+  width: 25px;
+  background-color: #a65e22;
+  /* box-shadow: 0 0 34px #3a4385; */
+}
+
+.mercury-orbit,
+.mercury-spin {
+  width: 280px;
+  height: 280px;
+  margin-left: -140px;
+  margin-top: -140px;
+}
+
+#mars {
+  margin-top: -16px;
+  margin-left: -16px;
+  height: 32px;
+  width: 32px;
+  background-color: #863222;
+  box-shadow: 0 0 14px #a64232;
+}
+
+.mars-orbit,
+.mars-spin {
+  width: 700px;
+  height: 700px;
+  margin-left: -350px;
+  margin-top: -350px;
+}
+
+/* Spinning animations */
+
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.earth-spin {
+  animation: spin-right 36.5s linear infinite;
+}
+.moon-spin {
+  animation: spin-right 3s linear infinite;
+}
+.venus-spin {
+  animation: spin-right 22s linear infinite;
+}
+.mercury-spin {
+  animation: spin-right 8.8s linear infinite;
+}
+.mars-spin {
+  animation: spin-right 68.7s linear infinite;
+}
+
+</style>
+
+    <!-- particles.js container -->
 <div id="particles-js"></div>
-	<!-- scripts -->
+
+<!-- scripts -->
 <script src="../particles.js"></script>
 <script src="js/app.js"></script>
+
+
+
+
+<body>
+<!-- particles.js container -->
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class='fas fa-globe-americas' style= 'color:black'></i>Bake your Hacks</a>
+    <a href="#https://lunamarginis.github.io/" class="w3-bar-item w3-button">HOME</a>
+    <a href="#bakeyourhacks" class="w3-bar-item w3-button w3-hide-small"><i class='fas fa-globe-americas' style= 'color:black'></i>Bake your Hacks</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     </a>
@@ -95,29 +311,31 @@ body, html {
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">Bake your Hacks</a>
+    <a href="#bakeyourhacks" class="w3-bar-item w3-button" onclick="toggleFunction()">Bake your Hacks</a>
   </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+<div class="bgimg-1 w3-display-container w3-opacity-min">
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-light-grey w3-xlarge w3-wide w3-animate-opacity">That <span class="w3-xlarge">CYBER</span> Guy</span>
   </div>
 </div>
 
-<!-- Container (About Section) -->
+  <!-- Functions -->
 <div id="colorlib-page">
-     <div class="container-wrap">
-     <div class="w3-content w3-container w3-padding-64" id="about">
+      <div class="container-wrap">
+	  <div class="w3-content w3-container w3-padding-64" id="bakeyourhacks">
         <h3 class="w3-center">Bake your Hacks</h3>
          <p class="w3-center"><em> "Give me six hours to chop down a tree and I will spend the first four sharpening the axe."- Abraham Lincoln</em></p>
            <div class="w3-row">
              <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="far fa-compass w3-margin-right"></i>Set your Direction</b></p><br>
+      <p><b><i class="fa fa-plane w3-margin-right"></i>Set your Direction</b></p>
+	  <br>
         </div>
        </div>
 	   </div>
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a> 
         <div id="colorlib-main">
           <section class="colorlib-about" data-section="about">
             <div class="colorlib-narrow-content">
@@ -125,9 +343,10 @@ body, html {
                 <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                   <div class="col-md-12">
                     <div class="about-desc">
-                      <h2 class="w3-center"> Baking the Hacks!!</h2>
-                    <p class="w3-center"><em>These resources are needed to help you to be a good Red-Team player.</em></p>
-                    <p class="w3-center"><em>All the red teaming tactics and strategies can be described based on Cyber-Kill Chain and Diamond Model.</em></p>
+                      <h2 class="w3-center"> Red Teaming!!</h2>
+                      <hr>
+                      <p class="w3-center"><em>These resources are needed to help you to be a good Red-Team player.</em></p>
+                      <p class="w3-center"><em>All the red teaming tactics and strategies can be described based on Cyber-Kill Chain and Diamond Model.</em></p>
                       <div class="col-md-12">
                         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
                           <br>
@@ -137,9 +356,9 @@ body, html {
                               <div
                                 onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(1) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
                                 onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(1) > div > a > div:nth-child(1)').style.backgroundColor=''">
-                                <a href="https://gtfobins.github.io/" style="text-decoration:none;">
+                                <a href=""https://gtfobins.github.io/" style="text-decoration:none;">
                                   <div>
-                                    <h4 class="mb-3">Sharpen your Knife</h4>
+                                    <h4 class="mb-3">Sharpen your Shells</h4>
                                   </div>
                                   <div
                                     class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
@@ -150,13 +369,25 @@ body, html {
                                       </div>
                                       <div id='right-div' class='resume-content'>
                                         <div class="subheading mb-0">
-                                          <p>GTFOBins is a curated list of Unix binaries that can be exploited by an attacker to bypass local security restrictions..</p>
-                                        </div>                                      
+                                          <p>GTFOBins is a curated list of Unix binaries that can be exploited by an attacker to bypass local security restrictions.</p>
                                         </div>
+										<br>
+													<br>
+							  <br>
+							   <br>
+							   			
+										<div class="mb-0">
+				
+                                        </div>
+										 <br>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
                                       </div>
                                     </div>
-                                    </a>
-				 </div>
+                                  </div>
+                                </a>
+                              </div>
                             </li>
                             <br>
                             <!-- <article class="timeline-entry animate-box" data-animate-effect="fadeInRight"> -->
@@ -165,21 +396,32 @@ body, html {
                               <div
                                 onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(1) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
                                 onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(1) > div > a > div:nth-child(1)').style.backgroundColor=''">
-                                <a href="https://www.exploit-db.com/google-hacking-database" style="text-decoration:none;">
+                                <a href="https://gchq.github.io/CyberChef/" style="text-decoration:none;">
                                   <div>
-                                    <h4 class="mb-3">Hack diaries</h4>
+                                    <h4 class="mb-3">Camouflage Your Codes</h4>
                                   </div>
                                   <div
                                     class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
                                     <div id="divMain">
                                       <div id='left-div' class="resume-content">
                                         <img style='float:left; margin:0 20px;' width='300px;' class='img-fluid'
-                                          src='images/dia.png'>
+                                          src='images/chef.png'>
                                       </div>
                                       <div id='right-div' class='resume-content'>
                                         <div class="subheading mb-0">
-                                          <p>The Exploit Database is maintained by Offensive Security, an information security training company that provides various Information Security Certifications as well as high end penetration testing services.</p>
+                                          <p>A simple, intuitive web app for analysing and decoding data without having to deal with complex tools or programming languages.</p>
                                         </div>
+										<br>
+																	  <br>
+							            <br>
+																	  <br>
+										<div class="mb-0">
+										 
+                                        </div>
+										 <br>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
                                       </div>
                                     </div>
                                   </div>
@@ -196,7 +438,7 @@ body, html {
                                 onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(3) > div > a > div:nth-child(1)').style.backgroundColor=''">
                                 <a href="https://nmap.org/" style="text-decoration:none;">
                                   <div>
-                                    <h4 class="mb-3">Bird's Eye View</h4>
+                                    <h4 class="mb-3">Make your Drone Fly</h4>
                                   </div>
                                   <div
                                     class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
@@ -209,7 +451,17 @@ body, html {
                                         <div class="subheading mb-0">
                                           <p>Nmap is used to discover hosts and services on a computer network by sending packets and analyzing the responses.</p>
                                         </div>
-                                        <br>
+										<br>
+																	  <br>
+							            <br>
+																	  <br>
+										<div class="mb-0">
+										 
+                                        </div>
+										 <br>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
                                       </div>
                                     </div>
                                   </div>
@@ -224,9 +476,77 @@ body, html {
                               <div
                                 onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
                                 onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor=''">
+                                <a href="https://github.com/rmusser01/Infosec_Reference/blob/master/Draft/RT.md" style="text-decoration:none;">
+                                  <div>
+                                    <h4 class="mb-3">Hard Shells?</h4>
+                                  </div>
+                                  <div
+                                    class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div id="divMain" width="80%;">
+                                      <div id='left-div' class="resume-content">
+                                        <img style='float:left; margin:0 20px;' width='300px;' height='150px;' class='img-fluid'
+                                          src='images/shell.png'>
+                                      </div>
+                                      <div id='right-div' class='resume-content'>
+                                        <div class="subheading mb-0">
+                                          <p>This Git Repo Talks about all the Red Teaming/Adversary (Emu/)Simulation/Explicitly Pen testing stuff.</p>
+                                        </div>
+                                        <br>
+										 <div class="mb-0">
+										 
+                                        </div>
+										 <br>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                      
+									  </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </li>
+                            <br>
+                            <li>
+                              <i class="fa-li fa fa-check"></i>
+                              <div
+                                onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
+                                onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor=''">
+                                <a href="https://www.exploit-db.com/google-hacking-database" style="text-decoration:none;">
+                                  <div>
+                                    <h4 class="mb-3">Hack $ploit</h4>
+                                  </div>
+                                  <div
+                                    class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div id="divMain" width="80%;">
+                                      <div id='left-div' class="resume-content">
+                                        <img style='float:left; margin:0 20px;' width='300px;' height='150px;' class='img-fluid'
+                                          src='images/dia.png'>
+                                      </div>
+                                      <div id='right-div' class='resume-content'>
+                                        <div class="subheading mb-0">
+                                          <p>The Exploit Database is maintained by Offensive Security, an information security training company that provides various Information Security Certifications as well as high end penetration testing services.</p>
+                                        </div>
+                                        <br>
+
+                                        <iframe  frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+									  </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </li>
+                            <br><br>
+                            <li>
+                              <i class="fa-li fa fa-check"></i>
+                              <div
+                                onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
+                                onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor=''">
                                 <a href="https://www.hackerone.com/blog/100-hacking-tools-and-resources" style="text-decoration:none;">
                                   <div>
-                                    <h4 class="mb-3">Find your Tool</h4>
+                                    <h4 class="mb-3">Find Your Weapons</h4>
                                   </div>
                                   <div
                                     class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
@@ -237,9 +557,14 @@ body, html {
                                       </div>
                                       <div id='right-div' class='resume-content'>
                                         <div class="subheading mb-0">
-                                          <p> Hacking Tools are computer programs and scripts that help you find and exploit weaknesses in computer systems, web applications, servers and networks.</p>
+                                          <p>Hacking Tools are computer programs and scripts that help you find and exploit weaknesses in computer systems, web applications, servers and networks.</p>
+                                        </div>
+                                        <div class="mb-0">
                                         </div>
                                         <br>
+                                        <iframe  frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe  frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe  frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
                                       </div>
                                     </div>
                                   </div>
@@ -250,16 +575,22 @@ body, html {
                           </ul>
                         </article>
                       </div>
-
+                      
                     </div>
+                  </div>
+                </div>
               </div>
-             </div>
-             </div>
-         </div>
-	   </section>
-     </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
-   </div>
+<style>
+hr.line {
+  border-top: 4px dashed white;
+}
+</style>
+<hr class="line">
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -271,7 +602,7 @@ body, html {
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-  <p>Designed by <a title="A security Researcher :P" target="_blank" class="w3-hover-text-red">A Security Researcher</a></p>
+  <p>Designed by <a title="A security Researcher" target="_blank" class="w3-hover-text-red">A Security Researcher</a></p>
 </footer>
 </body>
 </html>
