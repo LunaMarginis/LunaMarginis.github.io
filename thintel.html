@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<title>Coucou!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<head>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+
+
+<style>
+
+	  body, html {
+  /* width: 100%;
+  height: 100%; */
+  background-color: #121215
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #fff;
+  line-height: 1.8;
+  
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('/w3images/parallax1.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+  
+</style>
+
+
+ <!-- solar system -->
+<div class="w3-content w3-container">
+ <div class="w3-display-topmiddle">
+ <div class="solar-system">
+  <div id="sun"></div>
+ 
+  <div class="orbit mercury-orbit"></div>
+  <div class="mercury-spin">
+    <div id="mercury"></div>
+  </div>
+
+  <div class="orbit venus-orbit"></div>
+  <div class="venus-spin">
+    <div id="venus"></div>
+  </div>
+
+  <div class="orbit earth-orbit"></div>
+  <div class="earth-spin">
+    <div class="orbit moon-orbit"></div>
+    <div class="moon-spin">
+      <div id="moon"></div>
+    </div>
+
+    <img id="earth" src="https://raw.githubusercontent.com/everdimension-personal/codepen-assets/master/earth_small_150.jpg" />
+  </div>
+
+  <div class="orbit mars-orbit"></div>
+  <div class="mars-spin">
+    <div id="mars"></div>
+  </div>
+ </div>
+</div>
+</div>
+</div>
+  <!-- css -->
+<style>
+
+	  body, html {
+  /* width: 100%;
+  height: 100%; */
+  background-color: #121215
+}
+
+.solar-system {
+  position: relative;
+  width: 780px;
+  height: 780px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Some positioning rules that are common for all objects */
+.orbit {
+  border: 1px dashed #121215;
+}
+
+#sun,
+.orbit,
+.orbit + div,
+.orbit + div > div {
+  position: absolute;
+}
+
+#sun,
+.orbit,
+.orbit + div {
+  top: 50%;
+  left: 50%;
+}
+.orbit + div > div {
+  top: 0;
+  left: 50%;
+}
+
+.orbit,
+.orbit + div div,
+#earth {
+  border-radius: 50%;
+}
+
+/* Individual objects rules. They are pretty much the same for 
+all objects and basically only vary in orbit size 
+and planet size. And colors :) */
+
+#sun {
+  /* Positions the top-left corner of the image to be *
+	/* in the middle of the box */
+  height: 200px;
+  width: 200px;
+  background-color:#ff4d00 ; 
+  margin-top: -100px;
+  margin-left: -100px;
+  border-radius: 50%;
+  box-shadow: 0 0 84px orange;
+}
+
+#earth {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-radius: 50%;
+  box-shadow: 0 0 34px #3a4385;
+}
+
+.earth-orbit,
+.earth-spin {
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+}
+
+#moon {
+  margin-top: -6px;
+  margin-left: -6px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 14px #3a4385;
+}
+.moon-orbit,
+.moon-spin {
+  height: 90px;
+  width: 90px;
+  margin-top: -45px;
+  margin-left: -45px;
+  border-color: #447;
+}
+
+#venus {
+  margin-top: -20px;
+  margin-left: -20px;
+  height: 40px;
+  width: 40px;
+  background-color: #55a9e1; 
+  box-shadow: 0 0 34px #3a4385;
+}
+.venus-orbit,
+.venus-spin {
+  margin-top: -185px;
+  margin-left: -185px;
+  width: 370px;
+  height: 370px;
+}
+
+#mercury {
+  margin-top: -13.5px;
+  margin-left: -13.5px;
+  height: 25px;
+  width: 25px;
+  background-color: #a65e22;
+  /* box-shadow: 0 0 34px #3a4385; */
+}
+
+.mercury-orbit,
+.mercury-spin {
+  width: 280px;
+  height: 280px;
+  margin-left: -140px;
+  margin-top: -140px;
+}
+
+#mars {
+  margin-top: -16px;
+  margin-left: -16px;
+  height: 32px;
+  width: 32px;
+  background-color: #863222;
+  box-shadow: 0 0 14px #a64232;
+}
+
+.mars-orbit,
+.mars-spin {
+  width: 700px;
+  height: 700px;
+  margin-left: -350px;
+  margin-top: -350px;
+}
+
+/* Spinning animations */
+
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.earth-spin {
+  animation: spin-right 36.5s linear infinite;
+}
+.moon-spin {
+  animation: spin-right 3s linear infinite;
+}
+.venus-spin {
+  animation: spin-right 22s linear infinite;
+}
+.mercury-spin {
+  animation: spin-right 8.8s linear infinite;
+}
+.mars-spin {
+  animation: spin-right 68.7s linear infinite;
+}
+
+</style>
+
+    <!-- particles.js container -->
+<div id="particles-js"></div>
+
+<!-- scripts -->
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+
+
+
+
+<body>
+<!-- particles.js container -->
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#bakeyourhacks" class="w3-bar-item w3-button w3-hide-small"><i class='fas fa-globe-americas' style= 'color:black'></i>CTI</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+ 
+
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#bakeyourhacks" class="w3-bar-item w3-button" onclick="toggleFunction()">Cyber Threat Intelligence</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-light-grey w3-xlarge w3-wide w3-animate-opacity">That <span class="w3-xlarge">CYBER</span> Guy</span>
+  </div>
+</div>
+
+  <!-- Functions -->
+<div id="colorlib-page">
+      <div class="container-wrap">
+	  <div class="w3-content w3-container w3-padding-64" id="bakeyourhacks">
+        <h3 class="w3-center">Threat Intel</h3>
+         <p class="w3-center"><em> "Do not count on your hundreds of thousands of mitigated vulnerabilities. All it takes to compromise your own network is just one single loophole"</em></p>
+           <div class="w3-row">
+             <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-plane w3-margin-right"></i>Set your Direction</b></p>
+	  <br>
+        </div>
+       </div>
+	   </div>
+	  <div class="container-wrap">
+	      <div class="w3-content w3-container w3-padding-64"
+	     <div class="w3-center">
+	   <img style='float:left; margin:0 20px;' class='img-fluid'
+         src='images/CTI.png'>
+		 </div>
+		 </div>
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a> 
+        <div id="colorlib-main">
+          <section class="colorlib-about" data-section="about">
+            <div class="colorlib-narrow-content">
+              <div class="row">
+                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                  <div class="col-md-12">
+                    <div class="about-desc">
+                      <h2 class="w3-center"> Cyber Threat Intelligence</h2>
+                      <hr>
+                      <p class="w3-center"><em>These resources deals with the information about threats and threat actors that helps mitigate harmful events in cyberspace.</em></p>
+                      <p class="w3-center"><em>CTI is used to prepare, prevent, and identify cyber threats looking to take advantage of valuable resources.</em></p>
+                      <div class="col-md-12">
+                        <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+                          <br>
+                          <ul class="fa-ul mb-0">
+                              <li>
+                              <i class="fa fa-cloud" style="font-size:60;color:lightblue;text-shadow:2px 2px 2px #000000;"></i>
+                              <div
+                                onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(1) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
+                                onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(1) > div > a > div:nth-child(1)').style.backgroundColor=''">
+                                <a href=""https://exchange.xforce.ibmcloud.com/" style="text-decoration:none;">
+                                  <div>
+                                    <h4 class="mb-3">X-Force Exchange by IBM</h4>
+                                  </div>
+                                  <div
+                                    class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div id="divMain">
+                                      <div id='left-div' class="resume-content">
+                                        <img style='float:left; margin:0 20px;' width='300px;' class='img-fluid'
+                                          src='images/map.png'>
+                                      </div>
+                                      <div id='right-div' class='resume-content'>
+                                        <div class="subheading mb-0">
+                                          <p>IBM X-Force Exchange is a threat intelligence sharing platform that you can use to research security threats, to aggregate intelligence, and to collaborate with peers.</p>
+                                        </div>
+										<br>
+													<br>
+							  <br>
+							   <br>
+							   			
+										<div class="mb-0">
+				
+                                        </div>
+										 <br>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </li>
+                            <br>
+                            <!-- <article class="timeline-entry animate-box" data-animate-effect="fadeInRight"> -->
+                            <li>
+                              <i class="fa fa-cloud" style="font-size:60;color:lightblue;text-shadow:2px 2px 2px #000000;"></i>
+                              <div
+                                onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(1) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
+                                onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(1) > div > a > div:nth-child(1)').style.backgroundColor=''">
+                                <a href="https://otx.alienvault.com/browse/global?include_inactive=0&sort=-modified&page=1&indicatorsSearch=modified:%22%22" style="text-decoration:none;">
+                                  <div>
+                                    <h4 class="mb-3">OTX by AlienVault®</h4>
+                                  </div>
+                                  <div
+                                    class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div id="divMain">
+                                      <div id='left-div' class="resume-content">
+                                        <img style='float:left; margin:0 20px;' width='300px;' class='img-fluid'
+                                          src='images/alien.png'>
+                                      </div>
+                                      <div id='right-div' class='resume-content'>
+                                        <div class="subheading mb-0">
+                                          <p>AlienVault’s Open Threat Exchange (OTX) gives a good idea of where threats are coming from within organization, which is often difficult to pinpoint.</p>
+                                        </div>
+										<br>
+																	  <br>
+							            <br>
+																	  <br>
+										<div class="mb-0">
+										 
+                                        </div>
+										 <br>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </li>
+                            <br>
+                            <!-- </article>
+                              <article class="timeline-entry animate-box" data-animate-effect="fadeInRight"> -->
+                            <li>
+							<br>
+							<br>
+                              <i class="fa fa-cloud" style="font-size:60;color:lightblue;text-shadow:2px 2px 2px #000000;"></i>
+                              <div
+                                onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(3) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
+                                onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(3) > div > a > div:nth-child(1)').style.backgroundColor=''">
+                                <a href="https://urlhaus.abuse.ch/browse/" style="text-decoration:none;">
+                                  <div>
+                                    <h4 class="mb-3">URLhaus Database by Abuse</h4>
+                                  </div>
+                                  <div
+                                    class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div id="divMain">
+                                      <div id='left-div' class="resume-content">
+                                        <img style='float:left; margin:0 20px;' width='300px;' class='img-fluid'
+                                          src='images/urlab.png'>
+                                      </div>
+                                      <div id='right-div' class='resume-content'>
+                                        <div class="subheading mb-0">
+                                          <p>URLhaus is a project operated by abuse.ch. The purpose of the project is to collect, track and share malware URLs, helping network administrators and security analysts to protect their network and customers from cyber threats.</p>
+                                        </div>
+										<br>
+							            <br>
+				
+										<div class="mb-0">
+										 
+                                        </div>
+										 <br>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </li>
+                            <br>
+                            <!-- </article>
+                              <article class="timeline-entry animate-box" data-animate-effect="fadeInRight"> -->
+                            <li>
+                              <i class="fa fa-cloud" style="font-size:60;color:lightblue;text-shadow:2px 2px 2px #000000;"></i>
+                              <div
+                                onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
+                                onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor=''">
+                                <a href="https://norse-corp.com/map/" style="text-decoration:none;">
+                                  <div>
+                                    <h4 class="mb-3">Cyber Threat Maps</h4>
+                                  </div>
+                                  <div
+                                    class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div id="divMain" width="80%;">
+                                      <div id='left-div' class="resume-content">
+                                        <img style='float:left; margin:0 20px;' width='300px;' height='150px;' class='img-fluid'
+                                          src='images/tmap.png'>
+                                      </div>
+                                      <div id='right-div' class='resume-content'>
+                                        <div class="subheading mb-0">
+                                          <p>Threat maps can be used to study past attack styles, to recognize raw data behind DDoS attacks, or to even report outages on certain dates and times to their customer base</p>
+                                        </div>
+                                        <br>
+										 <div class="mb-0">
+										 
+                                        </div>
+										 <br>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                      
+									  </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </li>
+                            <br>
+                            <li>
+                              <i class="fa fa-cloud" style="font-size:60;color:lightblue;text-shadow:2px 2px 2px #000000;"></i>
+                              <div
+                                onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
+                                onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor=''">
+                                <a href="https://www.misp-project.org/" style="text-decoration:none;">
+                                  <div>
+                                    <h4 class="mb-3">MISP</h4>
+                                  </div>
+                                  <div
+                                    class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div id="divMain" width="80%;">
+                                      <div id='left-div' class="resume-content">
+                                        <img style='float:left; margin:0 20px;' width='300px;' height='150px;' class='img-fluid'
+                                          src='images/misp.png'>
+                                      </div>
+                                      <div id='right-div' class='resume-content'>
+                                        <div class="subheading mb-0">
+                                          <p>A threat intelligence platform for sharing, storing and correlating Indicators of Compromise of targeted attacks, threat intelligence, financial fraud information, vulnerability information or even counter-terrorism information.</p>
+                                        </div>
+                                        <br>
+
+                                        <iframe  frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+									  </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </li>
+                            <br><br>
+                            <li>
+                              <i class="fa fa-cloud" style="font-size:60;color:lightblue;text-shadow:2px 2px 2px #000000;"></i>
+                              <div
+                                onmouseover="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor='#78C2AD'"
+                                onmouseout="document.querySelector('#colorlib-main > section.colorlib-skills > div > div > div:nth-child(3) > article > ul > li:nth-child(5) > div > a > div:nth-child(1)').style.backgroundColor=''">
+                                <a href="https://www.virustotal.com/gui/" style="text-decoration:none;">
+                                  <div>
+                                    <h4 class="mb-3">VirusTotal</h4>
+                                  </div>
+                                  <div
+                                    class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div id="divMain" width="80%;">
+                                      <div id='left-div' class="resume-content">
+                                        <img style='float:left; margin:0 20px;' width='300px;' height='150px;' class='img-fluid'
+                                          src='images/vt.png'>
+                                      </div>
+                                      <div id='right-div' class='resume-content'>
+                                        <div class="subheading mb-0">
+                                          <p>Search VirusTotal's dataset for malware samples, URLs, domains and IP addresses according to binary properties, antivirus detection verdicts, static features, behavior patterns such as communication with specific hosts or IP addresses, submission metadata and many other notions. Pinpoint files similar to your suspect being studied. Samples matching search criteria can be downloaded for further study.</p>
+                                        </div>
+                                        <div class="mb-0">
+                                        </div>
+                                        <br>
+                                        <iframe  frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe  frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                        <iframe  frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </li>
+                            <br>
+                          </ul>
+                        </article>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+<style>
+hr.line {
+  border-top: 4px dashed white;
+}
+</style>
+<hr class="line">
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Designed by <a title="A security Researcher" target="_blank" class="w3-hover-text-red">A Security Researcher</a></p>
+</footer>
+</body>
+</html>
