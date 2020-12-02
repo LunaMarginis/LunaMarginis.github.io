@@ -1,3 +1,4 @@
+👨‍💻 #>_PS C:\> Get-ADUser -Identity LunaMarginis -Properties *
 <h3>
 <a id="user-content-hey-there-" class="anchor" aria-hidden="true" href="#hey-there-">
 <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
@@ -16,8 +17,11 @@ Beside's tech, I love &#128247; photography & &#127776;astronomy.</p>
 ...or Here!
 <a href="https://twitter.com/Adi_Cha_?s=08" rel="nofollow">
 <img align="left" alt="Adithya | Twitter" width="22px" src="https://camo.githubusercontent.com/395dda360ae28377b7c3247581a88b20573883519c2be833cb64fbb37dcbcc1a/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f6e706d2f73696d706c652d69636f6e734076332f69636f6e732f747769747465722e737667" data-canonical-src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" style="max-width:100%;">
-
 </a>
+
+ Findstr /blob/main/website*
+ <br>🌐
+ <a href="https://lunamarginis.github.io/" rel="nofollow">@LunaMarginis</a>
 <br>
 <p align="center">
   <a target="_blank" rel="noopener noreferrer" href="lap.gif"><img src="lap.gif" style="max-width:50%;"></a>
