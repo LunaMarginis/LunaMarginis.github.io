@@ -12,13 +12,20 @@ Former Research Intern <i class='fas fa-building' style='font-size:36px'></i><a 
 Beside's tech, I love &#128247; photography & &#127776;astronomy.</p> 
 <br>
 <br>
-    &#129309 Connect me Here!
-<a href="https://www.linkedin.com/in/adithyachandra/" rel="nofollow"><img src="https://camo.githubusercontent.com/454a1389e39deeb4ccf455b995ce0760d3c5a35e190c5b792b9ca6948fa31ce2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c696e6b65642d696e2d3336393f7374796c653d666c61742d737175617265266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d776869746526636f6c6f723d626c7565" alt="Linkedin" data-canonical-src="https://img.shields.io/badge/linked-in-369?style=flat-square&amp;logo=linkedin&amp;logoColor=white&amp;color=blue" style="max-width:100%;"></a>
 
+👨‍💻 #>_ netstat -a
+<br>
+<br>
+<p>
+ &#129309 Connect me Here!
+<a href="https://www.linkedin.com/in/adithyachandra/" rel="nofollow"><img src="https://camo.githubusercontent.com/454a1389e39deeb4ccf455b995ce0760d3c5a35e190c5b792b9ca6948fa31ce2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c696e6b65642d696e2d3336393f7374796c653d666c61742d737175617265266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d776869746526636f6c6f723d626c7565" alt="Linkedin" data-canonical-src="https://img.shields.io/badge/linked-in-369?style=flat-square&amp;logo=linkedin&amp;logoColor=white&amp;color=blue" style="max-width:100%;"></a>
+</p> 
 ...or Here!
 <a href="https://twitter.com/Adi_Cha_?s=08" rel="nofollow">
 <img align="left" alt="Adithya | Twitter" width="22px" src="https://camo.githubusercontent.com/395dda360ae28377b7c3247581a88b20573883519c2be833cb64fbb37dcbcc1a/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f6e706d2f73696d706c652d69636f6e734076332f69636f6e732f747769747465722e737667" data-canonical-src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" style="max-width:100%;">
 </a>
+<br>
+<br>
 
  👨‍💻 #>_ Findstr /blob/main/website*
  <br>🌐
