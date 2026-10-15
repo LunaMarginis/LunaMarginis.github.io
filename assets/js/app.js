@@ -18,9 +18,15 @@ let header = $(`
 <div class="collapse navbar-collapse " id="navbarSupportedContent">
   <ul class="navbar-nav ml-auto" id = "navbar-content">
    <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html">Home</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="projects.html">Projects & Research</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="research.html">Services</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="https://medium.com/@adithyachandra" target="_blank">Blogs</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="research.html">Expertise</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="threatdesk.html">ThreatDesk</a></li>
+   <li class="nav-item dropdown nav-item-hover">
+     <a class="nav-link dropdown-toggle" href="#" id="blogsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blogs</a>
+     <div class="dropdown-menu premium-dropdown" aria-labelledby="blogsDropdown">
+       <a class="dropdown-item" href="https://medium.com/@adithyachandra" target="_blank" rel="noopener">Medium</a>
+       <a class="dropdown-item" href="https://www.trellix.com/blogs/research/" target="_blank" rel="noopener">Trellix Research</a>
+     </div>
+   </li>
    <li class="nav-item">
    <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
    </li>
@@ -133,6 +139,13 @@ let footer = $(`
                   <form action="https://formcarry.com/s/7zGChmvrtYX" method="POST" accept-charset="UTF-8" >
                   <input type="text" name="name" placeholder="Your Name" required/>
                   <input type="email" name="email" placeholder="Email Address"  required/>
+                  <select name="enquiry_type" aria-label="Enquiry type" required>
+                    <option value="" disabled ${/threatdesk|research/.test(location.pathname) ? "" : "selected"}>Select enquiry type</option>
+                    <option value="Request ThreatDesk access" ${/threatdesk/.test(location.pathname) ? "selected" : ""}>Request ThreatDesk access</option>
+                    <option value="Services enquiry" ${/research/.test(location.pathname) ? "selected" : ""}>Services enquiry</option>
+                    <option value="General">General</option>
+                  </select>
+                  <input type="hidden" name="source_page" value="${location.pathname}"/>
                   <textarea name="message" placeholder="Type your Message" required></textarea>
                   <div class="g-recaptcha" data-sitekey="6LdkHvsdAAAAAAWFlgxGSJ_olSgnRVz4L4MFOW28"></div>
                   <input type="submit" value="Send" />
@@ -209,6 +222,10 @@ let footer = $(`
     </svg>
     </a>
 
+    <a class="social-button threatdesk" href="https://threat-desk.vercel.app/" target="_blank" rel="noopener" title="ThreatDesk" aria-label="ThreatDesk">
+      <i class="fas fa-shield-alt" style="color:#bb86fc;font-size:22px;margin:auto"></i>
+    </a>
+
     <a class="social-button linkedin" href="https://in.linkedin.com/in/adithyachandra" target="_blank" >
     <!-- svg code for linkedin icon -->
       <svg class="linkedin-icon-footer" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8"
@@ -240,7 +257,7 @@ let footer = $(`
     </div>
     </div>
 	<div class="quotes"    style="text-align:center;">
-	 <p> Copyright ©2022 All rights reserved </p>
+	 <p> Copyright ©2026 Adithya Chandra. All rights reserved </p>
 	 </div>
 </footer>
 `);
